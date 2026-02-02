@@ -113,6 +113,10 @@
       img: "img/instagram/dolce negra dylan/Captura.PNG",
       desc: "• Retail: $480.000 (con boleta) 🧾 • Estado: 9/10 Excelente condición 🔥 Incluyen boleta original Dolce & Gabbana 🔥 Diseño clásico y elegante 🔥 Stock limitado 📩 Para más información, contáctanos al privado ✅ 💳 Métodos de pago: transferencia o efectivo 📍 Entregas en metro 🚚 Envíos a todo Chile (vía Starken) ❌ No aceptamos devoluciones ni cambios", sizes: ["41"]
     },
+     { id: 8, title: "Zapatillas: burberry mujer", price: "$200.00", state: "Disponible",
+      img: "img/instagram/dolce negra dylan/Captura.PNG",
+      desc: "• Retail: $480.000 (con boleta) 🧾 • Estado: 9/10 Excelente condición 🔥 Incluyen boleta original Dolce & Gabbana 🔥 Diseño clásico y elegante 🔥 Stock limitado 📩 Para más información, contáctanos al privado ✅ 💳 Métodos de pago: transferencia o efectivo 📍 Entregas en metro 🚚 Envíos a todo Chile (vía Starken) ❌ No aceptamos devoluciones ni cambios", sizes: ["41"]
+    },
   ];
 
   const grid = document.getElementById("productGrid");
@@ -174,3 +178,4 @@
   if (modalBackdrop) modalBackdrop.addEventListener("click", closeModal);
   if (modalClose) modalClose.addEventListener("click", closeModal);
 })();
+
