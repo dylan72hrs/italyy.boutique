@@ -735,3 +735,73 @@ body::before{
     transform: rotateX(0deg) rotateY(0deg) translateY(0);
   }
 }
+
+
+
+
+
+
+/* =========================================
+   FIX MODAL EN MÓVIL (galería + foto visible)
+========================================= */
+@media (max-width: 768px){
+
+  /* el modal ocupa pantalla completa */
+  .modal-box,
+  .modal-card{
+    width: 94vw !important;
+    max-width: 94vw !important;
+    max-height: 92vh !important;
+    border-radius: 18px !important;
+    overflow: hidden !important;
+  }
+
+  /* el contenido del modal se ordena mejor */
+  .modal-card{
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  /* la parte de la imagen SIEMPRE visible arriba */
+  .modal-gallery{
+    position: relative !important;
+    width: 100% !important;
+    height: 44vh !important;      /* <- esto es clave */
+    min-height: 260px !important; /* asegura foto visible */
+    max-height: 420px !important;
+    background: #000 !important;
+    overflow: hidden !important;
+  }
+
+  /* imagen bien centrada */
+  .modal-gallery img,
+  .modal-image{
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;   /* para que no se corte */
+    object-position: center !important;
+    display: block !important;
+  }
+
+  /* flechas y X siempre encima */
+  .gallery-btn,
+  .modal-close{
+    z-index: 50 !important;
+  }
+
+  /* la info abajo scrolleable (no tapa la foto) */
+  .modal-info{
+    max-height: calc(92vh - 44vh) !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+    padding: 18px !important;
+  }
+}
+
+/* extra para móviles muy pequeños */
+@media (max-width: 420px){
+  .modal-gallery{
+    height: 40vh !important;
+    min-height: 230px !important;
+  }
+}
